@@ -13,7 +13,7 @@
 # Pre-requisites
 - Node.js v16.x or higher
 - Keycloak v17.x or higher (local or remote)
-- Keycloak realm, client and user setup (Refer to the [Keycloak documentation](https://www.keycloak.org/docs/latest/getting_started/index.html))
+- NPM v8.x or higher
 
 # Setup Keycloak
 - Download and install Keycloak from the [official website](https://www.keycloak.org/downloads.html)
