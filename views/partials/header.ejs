@@ -1,0 +1,15 @@
+<nav>
+    <header class="item"> <a href="/"> Keycloak-Express </a> </header>
+    <div>
+        <!--<a class="item" href="/signup"> Signup</a>-->
+        <a class="item" href="/home"> Home</a>
+        <a class="item" href="/profile"> Profile</a>
+        <a class="item" href="/contact"> Contact</a>
+        <a class="item" href="/info"> Info</a>
+        <% if (isAuthenticated) { %>
+            <a class="item" href="/logout"> Logout</a>
+            <% } else { %>
+                <a class="item" href="/login"> Login</a>
+                <% } %>
+    </div>
+</nav>

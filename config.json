@@ -1,0 +1,15 @@
+{
+    "keyCloak": {
+        "issuer": "http://localhost:8080/auth/realms/MyRealm",
+        "client_id": "my-client",
+        "client_secret": "my-secret",
+        "redirect_uris": ["http://localhost:3000/callback"]
+    },
+
+    "express": {
+        "port": 3000,
+        "secret": "my-secret"
+    },
+
+    "email": "my-email@xyz.com"
+}

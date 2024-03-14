@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Site Info</title>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" type="image/png" href="/favicon.png">
+    <link rel="stylesheet" href="/style.css">
+</head>
+
+<body>
+    <%- include('partials/header') %>
+        <section class="container">
+            <h1>Welcome to Keycloak-Testing Website</h1>
+            <p>This is a simple website to test Keycloak Server integration with Node.js</p>
+            <hr>
+            <h2>Libraries used:</h2>
+            <ul>
+                <li>Node.js - The backbone of the website</li>
+                <li>Express.js - The web framework for Node.js</li>
+                <li>Keycloak - The authentication and authorization server</li>
+                <li>EJS - The templating engine for Express.js</li>
+                <li>Passport.js - The authentication middleware integrating with Keycloak and Express.js</li>
+            </ul>
+            <hr>
+            <h2>Pages:</h2>
+            <p>The page routes are listed below. Some are protected (<img src="/lock.svg" alt="Lock Icon"
+                    class="icon">) and can only be accessed after logging in.</p>
+            <ul class="routes">
+                <li><a href="/home">Home</a> <img src="/lock.svg" alt="Lock Icon" class="icon"></li>
+                <li><a href="/profile">Profile</a> <img src="/lock.svg" alt="Lock Icon" class="icon"></li>
+                <li><a href="/info">Info Page</a></li>
+                <li><a href="/">Landing Page</a></li>
+                <li><a href="/contact">Contact Us</a></li>
+            </ul>
+            <hr>
+            <h2>Source Code:</h2>
+            <p>The source code for this website is available on <a href="https://github.com/Aayush-683/Keycloak-Express">GitHub</a></p>
+        </section>
+</body>
+
+</html>

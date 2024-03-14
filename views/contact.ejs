@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>HomePage</title>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" type="image/png" href="/favicon.png">
+    <link rel="stylesheet" href="/style.css">
+    <style>
+        /* Form CSS */
+        form {
+            align-items: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        input[type=text],
+        textarea {
+            width: 50%;
+            padding: 12px 20px;
+            margin: 8px 0;
+            display: inline-block;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        input[type=submit] {
+            width: 50%;
+            background-color: #4CAF50;
+            color: white;
+            padding: 14px 20px;
+            margin: 8px 0;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        input[type=submit]:hover {
+            background-color: #45a049;
+        }
+
+        textarea {
+            width: 50%;
+            height: 150px;
+            padding: 12px 20px;
+            box-sizing: border-box;
+            border: 2px solid #ccc;
+            border-radius: 4px;
+            background-color: #f8f8f8;
+            resize: none;
+        }
+
+        label {
+            width: 50%;
+            text-align: left;
+        }
+    </style>
+</head>
+
+<body>
+    <%- include('partials/header') %>
+        <section class="ui container">
+            <h1 align="center">Contact Me</h1>
+            <hr>
+            <form action="/contact" method="post" enctype="application/x-www-form-urlencoded">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                <label for="subject">Subject:</label>
+                <input type="text" id="subject" name="subject" required>
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" required></textarea>
+                <input type="submit" value="Submit">
+        </section>
+</body>
+
+</html>

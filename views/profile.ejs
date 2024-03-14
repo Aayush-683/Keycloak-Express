@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Profile</title>
+  <meta charset="UTF-8" />
+  <link rel="shortcut icon" type="image/png" href="/favicon.png" />
+  <link rel="stylesheet" href="/style.css" />
+</head>
+
+<body>
+  <%- include('partials/header') %>
+  <section class="container">
+    <h1 align="center">Your Details</h1>
+    <ul>
+      <li>Username: <%= user.preferred_username %>
+      </li>
+      <li>ID: <%= user.sub %>
+      </li>
+      <hr />
+      <li>Name: <%= user.name %>
+      </li>
+      <li>
+        Email: <%= user.email %>
+        <% if (user.email_verified) { %>
+        <img src="/verified.svg" alt="Verified Email" class="icon" />
+        <% } else { %>
+        <img src="/unverified.svg" alt="Unverified Email" class="icon" />
+        <% } %>
+      </li>
+      <hr />
+      <li>
+        Manage Account:
+        <a href="http://localhost:6969/realms/keycloak-test/account/#/personal-info">KeyCloak Account Management</a>
+      </li>
+    </ul>
+  </section>
+</body>
+
+</html>
